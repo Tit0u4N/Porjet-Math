@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta>
+    <title>MATH</title>
+    <link rel="stylesheet" href="style/style.css">
+    <script src="js/histogramme.js"></script>
+
+</head>
+<body>
+<h1>Projet Math</h1>
+<div id="histogramme">
+    <div id="graduationOrd">
+        <div>100%</div>
+        <div style="transform: translateY(-7px)">75%</div>
+        <div>50%</div>
+        <div style="transform: translateY(5px)">25%</div>
+        <div>0%</div>
+    </div>
+    <div id="graphique">
+        <div style="width: 50%; height: 75%"></div>
+        <div style="width: 20%; height: 50%"></div>
+        <div style="width: 30%; height: 25%"></div>
+    </div>
+    <div id="caseVide"></div>
+    <div id="graduationAbs">
+        <div>2</div>
+        <div>4</div>
+        <div>8</div>
+    </div>
+</div>
+<div class="container">
+    <table id="formDonnee">
+        <thead>
+        <tr id="titre">
+            <td></td>
+            <td><span id="titre-0">Baton 1</span></td>
+            <td><span id="titre-1">Baton 2</span></td>
+        </tr>
+        </thead>
+        <tbody>
+        <tr id="classes">
+            <td>Classe</td>
+            <td><input id="classes-input-0" type="text" placeholder="]0 - 2]"></td>
+            <td><input id="classes-input-1" type="text" placeholder="]2 - 4]"></td>
+        </tr>
+        <tr id="effectifs">
+            <td>Effectif</td>
+            <td><input id="effectifs-input-0" type="number" min="0" placeholder="..."></td>
+            <td><input id="effectifs-input-1" type="number" min="0" placeholder="..."></td>
+        </tr>
+        <tr id="amplitudes">
+            <td>Amplitude</td>
+            <td><span id="ampli-0">0</span></td>
+            <td><span id="ampli-1">0</span></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+<div class="container">
+    <div class="bouton" onclick="saveDonnee()">
+        <span>
+            Actualiser l'histogramme
+        </span>
+    </div>
+    <div class="bouton" onclick="ajoutCol('classes','effectifs','amplitudes','titre')">
+        <span>
+            Ajouter une colone
+        </span>
+    </div>
+</div>
+
+</div>
+
+
+
+
+</body>
+<script>
+    recuperationTailleGraph();
+</script>
+</html>
