@@ -60,6 +60,15 @@ body > h1 {
   height: 1px;
   margin-top: 11px;
   margin-left: 2px;
+  animation: agrandissementWidth 3s;
+}
+@keyframes agrandissementWidth {
+  from {
+    width: 0;
+  }
+  to {
+    width: var(--taille-graphique);
+  }
 }
 #histogramme #caseVide {
   grid-area: 2/1/2/2;
@@ -77,6 +86,19 @@ body > h1 {
   padding-right: 20px;
   padding-left: 20px;
 }
+#histogramme #graphique > div {
+  --hauteur: 0;
+  transition: height 1s;
+  animation: agrandissementHeight 2s;
+}
+@keyframes agrandissementHeight {
+  from {
+    height: 0;
+  }
+  to {
+    height: var(--hauteur);
+  }
+}
 #histogramme #graphique > div:nth-child(n+1) {
   background-color: #4b4bd2;
 }
@@ -90,7 +112,8 @@ body > h1 {
   border-top: var(--border-style-graphique);
   border-left: var(--border-style-graphique);
   padding-right: 20px;
-  padding-left: 20px;
+  padding-left: 15px;
+  font-size: 20px;
   display: flex;
 }
 
